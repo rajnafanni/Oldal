@@ -1,0 +1,94 @@
+/* Alap beállítások */
+body {
+    font-family: Montserrat, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* A fejléc teljes szélességben */
+.header {
+    width: 100%; /* A fejléc szélessége 100%-os lesz */
+    height: 78px; /* A fejléc magassága */
+    background-color: #000000; /* A fejléc háttérszíne */
+    color: white; /* A szöveg színe */
+    display: flex;
+    justify-content: flex-start; /* A tartalom balra igazítva */
+    align-items: center; /* Középre igazítja függőlegesen */
+    position: fixed; /* A fejléc rögzített pozícióban */
+    top: 0; /* A fejléc a tetején marad */
+    left: 0; /* A bal oldalon lesz */
+    z-index: 1000; /* A fejléc mindig a legelső elem lesz */
+}
+
+/* A fejléc tartalmát egy konténerbe tesszük, ami 345px-től kezdődik */
+.header-container {
+    display: flex; /* Flexbox elrendezés */
+    justify-content: space-between; /* Elosztja a tartalmat */
+    align-items: center; /* Középre igazítja a tartalmat */
+    width: 100%;
+    max-width: 1920px; /* Maximális szélesség */
+    padding-left: 345px; /* A bal oldali margó, ahol a tartalom kezdődik */
+    box-sizing: border-box;
+}
+
+/* Fejléc szövege (Rajna Fanni) */
+.header h1 {
+    margin: 0; /* Az alapértelmezett margó eltávolítása */
+    font-size: 24px; /* A fejléc szövegének betűmérete */
+    color: white; /* Fehér szöveg szín */
+    text-align: left; /* Balra igazított szöveg */
+    font-weight: 300;
+    position: relative;
+    text-transform: uppercase;
+    left: 164px; /* A szöveg 164px-re kerül a bal oldalról */
+}
+
+/* Navbar alap stílusok */
+.navbar {
+    margin-left: 164px; /* A navigációs sáv 164px-re kerül a szöveg mögé */
+}
+
+.navbar ul {
+    list-style: none; /* Eltávolítja a lista pontokat */
+    padding: 0;
+    margin: 0;
+    display: flex; /* A menüpontokat vízszintesen rendezi el */
+}
+
+.navbar li {
+    margin: 0 32px; /* 32px távolság a menüpontok között */
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none; /* Eltávolítja az aláhúzást */
+    font-size: 24px;
+    text-transform: uppercase; /* Nagybetűs szöveg a menüpontoknál */
+    padding: 8px 16px;
+    display: inline-block;
+}
+
+.navbar a:hover {
+    border-bottom: 2px solid #ffffff;
+}
+
+/* Reszponzív beállítások kisebb képernyők számára */
+@media (max-width: 1919px) {
+    .header h1 {
+        left: 0; /* A szöveg középre igazítva lesz kisebb képernyőkön */
+        text-align: center; /* A szöveg középre igazítva */
+    }
+
+    .navbar {
+        margin-left: 0; /* A navigációs sáv középre igazítva lesz */
+    }
+
+    .navbar ul {
+        justify-content: center; /* A menüpontokat középre rendezi */
+    }
+
+    .navbar li {
+        margin: 0 16px; /* Kevesebb távolság a menüpontok között kisebb képernyőkön */
+    }
+}
